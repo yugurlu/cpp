@@ -37,15 +37,15 @@ class userdata
 
 			ifstream read("data" + username + ".txt");
 			getline(read,username);
-			cout << username << endl;
+			cout << "Username: " << username << endl;
 			getline(read, password);
-			cout << password << endl;
+			cout << "Password: " << password << endl;
 			getline(read, name);
-			cout << name << endl;
+			cout << "Name: " << name << endl;
 			getline(read, surname);
-			cout << surname << endl;
+			cout << "Surname: " << surname << endl;
 			getline(read, age);
-			cout << age << endl;
+			cout << "Age: " << age << endl;
 		}
 };
 
@@ -58,7 +58,7 @@ int main()
 	if (choice == 1)
 	{
 		user.indata();
-		cout << "information is being saved..."; sleep(3);
+		cout << "information is being saved..." << endl; sleep(3);
 		main();
 	}
 	else if(choice == 2)
@@ -88,6 +88,6 @@ int main()
 			user.getdata(username);
 		}
 		else
-			return ;
+			return 0;
 	}
 }
